@@ -8,7 +8,6 @@ import {
 } from "../db/indexedDb";
 import { toast } from "react-toastify";
 
-// Async thunks
 export const fetchTasks = createAsyncThunk(
   "tasks/fetchTasks",
   async (filter?: FilterType | undefined) => {
