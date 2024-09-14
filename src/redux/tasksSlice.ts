@@ -7,15 +7,20 @@ import {
   updateTaskInDB,
 } from "../db/indexedDb";
 import { toast } from "react-toastify";
+import {
+  decryptTaskListDescription,
+  encryptTaskDescription,
+} from "../utils/task";
 
 export const fetchTasks = createAsyncThunk(
   "tasks/fetchTasks",
   async (filter?: FilterType | undefined) => {
     try {
       const tasks = await getTasksFromDB(filter);
-      return tasks;
+      const decryptedTasks: Task[] = decryptTaskListDescription(tasks);
+      return decryptedTasks;
     } catch (error) {
-      console.error(!!error);
+      console.error(error);
       toast.error("Error loading tasks");
       return "Error loading tasks";
     }
@@ -24,7 +29,8 @@ export const fetchTasks = createAsyncThunk(
 
 export const addTask = createAsyncThunk("tasks/addTask", async (task: Task) => {
   try {
-    await addTaskToDB(task);
+    const encryptedTask: Task = encryptTaskDescription(task);
+    await addTaskToDB(encryptedTask);
     toast.success("Task added successfully");
     return task;
   } catch (error) {
@@ -37,7 +43,8 @@ export const updateTask = createAsyncThunk(
   "tasks/updateTask",
   async (task: Task) => {
     try {
-      await updateTaskInDB(task);
+      const encryptedTask: Task = encryptTaskDescription(task);
+      await updateTaskInDB(encryptedTask);
       toast.success("Task updated successfully");
       return task;
     } catch (error) {
