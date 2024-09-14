@@ -1,0 +1,19 @@
+.filter-group {
+  margin-bottom: 20px;
+}
+
+.filter-group h3 {
+  margin-bottom: 10px;
+}
+
+.filter-item {
+  padding: 6px;
+  margin: 1px;
+  border-radius: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.filter-item:hover {
+  background-color: #f0f0f0;
+}
