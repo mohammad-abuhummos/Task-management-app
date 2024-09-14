@@ -10,6 +10,7 @@ import { categoriesOptions, statusOptions } from "../utils/options";
 import DeleteTaskModal from "../components/modal/DeleteTaskModal";
 import TaskModal from "../components/modal/TaskModel";
 import TaskItem from "../components/task/TaskItem";
+import Placeholder from "../components/placeholders/Placeholder";
 
 function HomePage() {
     const dispatch: AppDispatch = useDispatch();
@@ -87,6 +88,7 @@ function HomePage() {
                         </div>
                     </Filter>
                     <div className="w-full flex flex-col gap-8">
+                        {tasks.length == 0 && <Placeholder />}
                         {tasks.map((task: Task) => (
                             <TaskItem
                                 key={task.id}
