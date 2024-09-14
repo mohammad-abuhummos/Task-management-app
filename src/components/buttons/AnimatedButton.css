@@ -1,0 +1,54 @@
+.animated-button {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start; /* Align text and icon initially */
+    padding: 10px 20px;
+    border: none;
+    min-width: 150px; /* Ensure there's a minimum width */
+    background-color: var(--primary);
+    color: white;
+    font-size: 16px;
+    border-radius: 50px;
+    transition: background-color 0.3s ease, max-width 0.4s ease, padding 0.3s ease;
+    cursor: pointer;
+    overflow: hidden;
+    position: relative;
+    max-width: 160px; /* Control button width in its original state */
+  }
+  
+  .animated-button:hover {
+
+    background-image: linear-gradient(135deg, var(--primary), var(--secondary));
+
+    background-color: #2f77cc;
+    justify-content: center; /* Center icon when text is hidden */
+    max-width: 60px; /* Shrink button width on hover */
+    padding: 10px 10px; /* Adjust padding for a smaller button */
+  }
+  
+  .icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+    transition: all 0.6s ease-in-out, ;
+  }
+  
+  .button-text {
+    transition: all 0.6s ease-in-out, transform 0.6s ease-in-out;
+    white-space: nowrap; /* Prevents text from breaking */
+    overflow: hidden;
+  }
+  
+  .animated-button:hover .button-text {
+    width: 1%;
+
+    opacity: 0; /* Fade out the text */
+    transform: translateX(-20px); /* Slide text out */
+    pointer-events: none; /* Prevents interaction with hidden text */
+  }
+  
+  .animated-button:hover .icon {
+    transform: scale(1.2); /* Slightly increase icon size */
+    margin-right: 0; /* Remove margin to center the icon */
+  }
+  
