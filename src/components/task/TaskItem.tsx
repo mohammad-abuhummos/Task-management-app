@@ -34,7 +34,7 @@ const TaskItem: React.FC<TaskItemProps> = (props) => {
                         <h1 title={task.description}>{task.title}</h1>
                         {!!task.categories && <div className="flex flex-wrap gap-8">
                             {task.categories.map((category: string) => (
-                                <Chip text={category} />
+                                <Chip key={`${task.id}${category}`} text={category} />
                             ))}
 
                         </div>}

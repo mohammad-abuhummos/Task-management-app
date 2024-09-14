@@ -25,9 +25,7 @@ const TaskModal: React.FC<TaskModalProps> = (props) => {
     const [categories, setCategories] = useState<string[]>(task?.categories ?? []);
     const handleSubmit = (event: React.FormEvent) => {
         event.preventDefault();
-        console.log('task', "task called");
         if (!title) {
-            alert('Please fill out all fields.');
             return;
         }
 
@@ -63,7 +61,7 @@ const TaskModal: React.FC<TaskModalProps> = (props) => {
                         <Textarea id="1" label="Task description (optional)" onChange={(e) => { setDescription(e.target.value) }} value={description} />
                         <ChipInput
                             id="multi-select"
-                            label="Select Options"
+                            label="Select Categories"
                             options={categoriesOptions}
                             selectedValues={categories}
                             onChange={(values) => setCategories(values)}

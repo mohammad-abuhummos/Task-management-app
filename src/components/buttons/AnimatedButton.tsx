@@ -1,6 +1,6 @@
 import React from "react";
 import "./AnimatedButton.css";
-import icon from "../../assets/icons/Add.svg";
+import icon from "../../assets/icons/add.svg";
 
 interface AnimatedButtonProps {
   text: string;
