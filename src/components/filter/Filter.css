@@ -1,0 +1,17 @@
+.min-w-260 {
+  min-width: 260px;
+}
+.min-h-filter {
+  min-height: calc(100vh - 200px);
+}
+.text-justify {
+  text-align: justify;
+}
+@media (max-width: 768px) {
+  .min-w-260 {
+    min-width: auto;
+  }
+  .min-h-filter {
+    min-height: fit-content;
+  }
+}
