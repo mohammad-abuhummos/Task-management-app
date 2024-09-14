@@ -1,0 +1,6 @@
+.chip{
+  border: 1px solid var(--primary); 
+  font-size: 14px;
+  font-weight: 400;
+  color: var(--primary);
+}
