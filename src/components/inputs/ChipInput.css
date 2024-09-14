@@ -1,0 +1,70 @@
+.floating-label-chip {
+  position: relative;
+  display: inline-block;
+  width: 100%;
+}
+
+.input-container {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  cursor: pointer;
+  min-height: 40px;
+  width: 100%;
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  outline: none;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+
+.chips-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  flex-grow: 1;
+  overflow: hidden;
+}
+
+.chip {
+  display: inline-block;
+  background-color: #f1f1f1;
+  border-radius: 16px;
+  padding: 4px 8px;
+  font-size: 14px;
+  margin-bottom: 4px;
+}
+
+.dropdown {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  max-height: 200px;
+  overflow-y: auto;
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  background-color: white;
+  z-index: 10;
+}
+
+.dropdown-item {
+  display: flex;
+  align-items: center;
+  padding: 8px;
+  cursor: pointer;
+}
+.dropdown-item label {
+  display: inline;
+  width: fit-content;
+}
+.dropdown-item input {
+  display: inline;
+  width: fit-content !important;
+}
+
+.dropdown-item:hover {
+  background-color: #f0f0f0;
+}

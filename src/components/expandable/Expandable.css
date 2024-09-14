@@ -1,0 +1,32 @@
+.expandable {
+  overflow: hidden;
+}
+
+.expandable-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  cursor: pointer;
+}
+
+.expandable-icon {
+  transition: transform 0.3s ease;
+}
+
+.expandable-icon.expanded {
+  transform: rotate(180deg);
+}
+
+.expandable-content {
+  max-height: 0;
+  overflow: hidden;
+  transition: all 0.5s ease-in-out;
+  background-color: #fff;
+  padding: 0 10px;
+}
+
+.expandable-content.expanded {
+  max-height: fit-content;
+  padding: 10px;
+}

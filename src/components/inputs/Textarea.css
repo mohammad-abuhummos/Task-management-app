@@ -1,0 +1,7 @@
+.floating-label textarea {
+  width: 95%;
+  padding: 10px;
+  border: 1px solid #ebecfb;
+  border-radius: 6px;
+  outline: none;
+}
