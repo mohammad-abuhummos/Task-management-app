@@ -1,0 +1,240 @@
+/* 
+  Structure Tree:
+  ├── fonts
+  ├── colors
+  ├── containers
+  │   ├── body
+  │   ├── .container
+  │   └── .card
+  ├── spacing
+  │   ├── .m-auto
+  │   ├── .p-32
+  │   ├── .p-40
+  │   ├── .pt-40
+  │   ├── .px-40
+  │   ├── .pt-24
+  │   ├── .px-16
+  │   ├── .py-4
+  │   ├── .px-24
+  │   ├── .py-24
+  │   ├── .py-16
+  │   ├── .h-full
+  │   └── .w-full
+  ├── gap
+  │   ├── .gap-8
+  │   ├── .gap-16
+  │   └── .gap-32
+  ├── flexbox
+  │   ├── .flex
+  │   ├── .flex-wrap
+  │   ├── .flex-row
+  │   ├── .flex-md-row
+  │   ├── .flex-col
+  │   ├── .justify-between
+  │   └── .items-center
+  ├── text
+  │   ├── .text-center
+  │   ├── h1
+  │   ├── .font-bold
+  │   └── .text-capitalize
+  ├── rounded corners
+  │   ├── .rounded-6
+  │   ├── .rounded-16
+  │   ├── .rounded-32
+  │   └── .rounded-50
+  └── buttons
+      ├── .button-primary
+      ├── .button-secondary
+      └── .button-tertiary
+*/
+/* fonts */
+@font-face {
+  font-family: "Quicksand";
+  src: url("./fonts/Quicksand-Light.ttf") format("truetype");
+  font-weight: 300;
+}
+@font-face {
+  font-family: "Quicksand";
+  src: url("./fonts/Quicksand-Regular.ttf") format("truetype");
+  font-weight: 400;
+}
+@font-face {
+  font-family: "Quicksand";
+  src: url("./fonts/Quicksand-Medium.ttf") format("truetype");
+  font-weight: 500;
+}
+@font-face {
+  font-family: "Quicksand";
+  src: url("./fonts/Quicksand-SemiBold.ttf") format("truetype");
+  font-weight: 600;
+}
+@font-face {
+  font-family: "Quicksand";
+  src: url("./fonts/Quicksand-Bold.ttf") format("truetype");
+  font-weight: 700;
+}
+/* colors */
+
+:root {
+  font-family: "Quicksand", sans-serif;
+  font-weight: 400;
+  --primary: #395bd3;
+  --secondary: #0c1049;
+  --tertiary: #ff3093;
+  --white: #ffffff;
+  --black: #000000;
+  --border: #ebecfb;
+  --gray: #f2f5ff;
+  --body: #ecf0ff;
+  --caption: #717298;
+  --warning: #ff6b00;
+  --warning-inverse: #fff2de;
+  --success: #0a7900;
+  --success-inverse: #e1ffde;
+  --icon-button: #f6f6ff;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* containers */
+
+body {
+  background-color: var(--body);
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.card {
+  background-color: var(--white);
+  border-radius: 16px;
+  box-shadow: 0px 4px 16px 0px #c1c1c140;
+}
+/* Spacing */
+.m-auto {
+  margin: auto;
+}
+.py-4 {
+  padding-top: 4px;
+  padding-bottom: 4px;
+}
+.px-16 {
+  padding-left: 16px;
+  padding-right: 16px;
+}
+.py-16 {
+  padding-top: 16px;
+  padding-bottom: 16px;
+}
+.pt-24 {
+  padding-top: 24px;
+}
+.px-24 {
+  padding-left: 24px;
+  padding-right: 24px;
+}
+.py-24 {
+  padding-top: 24px;
+  padding-bottom: 24px;
+}
+.p-32 {
+  padding: 32px;
+}
+.p-40 {
+  padding: 40px;
+}
+.pt-40 {
+  padding-top: 40px;
+}
+.px-40 {
+  padding-left: 40px;
+  padding-right: 40px;
+}
+.h-full {
+  height: 100%;
+}
+.w-full {
+  width: 100%;
+}
+.gap-8 {
+  gap: 8px;
+}
+.gap-16 {
+  gap: 16px;
+}
+.gap-32 {
+  gap: 32px;
+}
+.flex {
+  display: flex;
+}
+.flex-wrap {
+  flex-wrap: wrap;
+}
+.flex-row {
+  flex-direction: row;
+}
+
+@media (max-width: 768px) {
+  .flex-md-row {
+    flex-direction: column;
+  }
+}
+.flex-col {
+  flex-direction: column;
+}
+.justify-between {
+  justify-content: space-between;
+}
+.items-center {
+  align-items: center;
+}
+.text-center {
+  text-align: center;
+}
+
+/* Typography */
+h1 {
+  font-size: 24px;
+  font-weight: 600;
+  line-height: 30px;
+}
+.font-bold {
+  font-weight: 700;
+}
+/*   */
+.rounded-6 {
+  border-radius: 6px;
+}
+.rounded-16 {
+  border-radius: 16px;
+}
+.rounded-32 {
+  border-radius: 32px;
+}
+.rounded-50 {
+  border-radius: 50px;
+}
+.text-capitalize {
+  text-transform: capitalize;
+}
+
+/* buttons */
+
+.button-primary {
+  background-color: var(--primary);
+  color: var(--white);
+}
+
+.button-secondary {
+  background-color: var(--gray);
+  color: var(--primary);
+}
+.button-tertiary {
+  background-color: var(--tertiary);
+  color: var(--white);
+}
