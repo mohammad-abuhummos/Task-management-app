@@ -91,16 +91,6 @@ For the encryption algorithm i used Caesar Cipher
 #### How It Works
 The Caesar cipher is a substitution cipher in which every letter in the plaintext is shifted down or up the alphabet a few places, determined by a key.
 
-```plaintext
-
-idb
-redux
-react-redux
-react-toastify
-redux-thunk
-
-```
-
 Encryption Function: caesarEncrypt
 ```plaintext
 Input:
