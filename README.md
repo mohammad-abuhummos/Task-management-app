@@ -70,11 +70,15 @@ redux-thunk
 ### Database 
 For the database, I used IndexedDB for the following reasons:
 
-1.Storage Capacity
+```plaintext
+1.Storage Capacity:
   IndexedDB allows you to store larger amounts of data than localStorage. 
+```
+```plaintext
 2.Transactions
   IndexedDB supports transactions, which ensures data integrity and consistency when performing multiple operations.
+```
 
 
-### Database 
+### Global state management 
 
