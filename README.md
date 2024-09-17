@@ -70,15 +70,45 @@ redux-thunk
 ### Database 
 For the database, I used IndexedDB for the following reasons:
 
-```plaintext
-1.Storage Capacity:
+- Storage Capacity:
   IndexedDB allows you to store larger amounts of data than localStorage. 
-```
-```plaintext
-2.Transactions
+
+- Transactions
   IndexedDB supports transactions, which ensures data integrity and consistency when performing multiple operations.
-```
 
 
 ### Global state management 
 
+For global state management, I used Redux for the following reasons:
+* Even in small projects, managing the applications state can become complicated as it grows. Redux helps centralize the state in a single store, making it easier to manage and debug.
+* Starting with Redux in a small project prepares your app for future scalability. As your project grows, Reduxs structure will support larger and more complex state management needs.
+* Sharing state across multiple components becomes much simpler with Redux, avoiding issues of prop drilling or inconsistent state.
+* Redux enforces a strict pattern that ensures state updates are predictable and follow clear rules. This helps in maintaining a clear flow of data even in smaller applications.
+
+
+### Encryption algorithm
+For the encryption algorithm i used Caesar Cipher 
+#### How It Works
+The Caesar cipher is a substitution cipher in which every letter in the plaintext is shifted down or up the alphabet a few places, determined by a key.
+
+```plaintext
+
+idb
+redux
+react-redux
+react-toastify
+redux-thunk
+
+```
+
+Encryption Function: caesarEncrypt
+```plaintext
+Input:
+  data - string to encrypt
+  key - string to generate shift value (the length of the string is used as a shift value).
+Steps:
+  Calculate the shift value as the length of the key.
+  Loop through each character of data.
+  Convert each character's Unicode value (using charCodeAt), add the shift value, and convert it back to a string (using String.fromCharCode).
+  Return the encrypted string.
+```
