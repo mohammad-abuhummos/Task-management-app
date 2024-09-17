@@ -10,6 +10,11 @@ and filter tasks by their completion status or category.
 ```plaintext
 v20.14.0
 ```
+## Env
+
+```plaintext
+VITE_ENCRYPT_KEY= 
+```
 
 ## Installation and Run
 
@@ -50,3 +55,26 @@ App
 ```
 
 ## Documentation
+
+### Packages
+```plaintext
+
+idb
+redux
+react-redux
+react-toastify
+redux-thunk
+
+```
+
+### Database 
+For the database, I used IndexedDB for the following reasons:
+
+1.Storage Capacity
+  IndexedDB allows you to store larger amounts of data than localStorage. 
+2.Transactions
+  IndexedDB supports transactions, which ensures data integrity and consistency when performing multiple operations.
+
+
+### Database 
+
