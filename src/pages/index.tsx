@@ -1,5 +1,5 @@
 import { useDispatch, useSelector } from "react-redux";
-import Filter from "../components/filter/Filter";
+import FilterWrap from "../components/filter/FilterWrap";
 import FilterGroup from "../components/filter/FilterGroup";
 import Header from "../components/header/Header";
 import { fetchTasks, updateTask } from "../redux/tasksSlice";
@@ -66,27 +66,25 @@ function HomePage() {
         <>
             <div className="container">
                 <Header />
-                <div className="flex flex-md-row gap-32 justify-between pt-24">
-                    <Filter>
-                        <div className="pt-4">
-                            <FilterGroup
-                                value={filter.status}
-                                name="test"
-                                title="Completion Status"
-                                options={["all", ...statusOptions]}
-                                onOptionChange={handleOptionChangeStatus}
-                            />
-                        </div>
-                        <div className="pt-40">
-                            <FilterGroup
-                                value={filter.category}
-                                name="Categories"
-                                title="Categories"
-                                options={["all", ...categoriesOptions]}
-                                onOptionChange={handleOptionChangeCategories}
-                            />
-                        </div>
-                    </Filter>
+                <div className="flex flex-md-row gap-32 justify-between pt-24 relative">
+                    <FilterWrap>
+                        <FilterGroup
+                            value={filter.status}
+                            name="test"
+                            title="Completion Status"
+                            options={["all", ...statusOptions]}
+                            onOptionChange={handleOptionChangeStatus}
+                            className="pt-4"
+                        />
+                        <FilterGroup
+                            value={filter.category}
+                            name="Categories"
+                            title="Categories"
+                            options={["all", ...categoriesOptions]}
+                            onOptionChange={handleOptionChangeCategories}
+                            className="pt-40"
+                        />
+                    </FilterWrap>
                     <div className="w-full flex flex-col gap-8">
                         {tasks.length == 0 && <Placeholder />}
                         {tasks.map((task: Task) => (
