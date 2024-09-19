@@ -33,7 +33,6 @@ npm run dev
 ```
 
 ## Testing
-
 I used Jest, Vitest and React Testing Library for unit and integration testing.
 
 ### Running Tests
