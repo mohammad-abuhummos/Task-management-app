@@ -44,11 +44,11 @@ const TaskItem: React.FC<TaskItemProps> = (props) => {
                     </div>
                     <div className="flex flex-wrap items-center gap-8">
                         <StatusDropdown onChange={handleStatusChange} value={task.status} />
-                        <IconButton onClick={() => onUpdate(task)}>
+                        <IconButton aria-label="edit task" onClick={() => onUpdate(task)}>
                             <EditIcon />
                         </IconButton>
 
-                        <IconButton onClick={() => onDelete(task)}>
+                        <IconButton aria-label="delete task" onClick={() => onDelete(task)}>
                             <DeleteIcon size={24} />
                         </IconButton>
 
