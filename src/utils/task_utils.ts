@@ -1,5 +1,5 @@
 import { Task } from "../types/types";
-import { caesarDecrypt, caesarEncrypt } from "./encrypt";
+import { caesarDecrypt, caesarEncrypt } from "./encrypt_utils";
 
 export const encryptTaskListDescription = (taskList: Task[]): Task[] => {
   return taskList.map((task: Task) => {

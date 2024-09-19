@@ -5,12 +5,13 @@ interface IconProps {
     color?: string;
 }
 
-const DeleteIcon: React.FC<IconProps> = ({ size = 24, color = 'white' }) => (
+const CloseIcon: React.FC<IconProps> = ({ size = 24, color = 'white' }) => (
     <svg
         width={size}
         height={size}
         viewBox="0 0 14 14"
         fill="none"
+        className='m-auto'
         xmlns="http://www.w3.org/2000/svg"
     >
         <path
@@ -24,4 +25,4 @@ const DeleteIcon: React.FC<IconProps> = ({ size = 24, color = 'white' }) => (
 
 );
 
-export default DeleteIcon;
+export default CloseIcon;

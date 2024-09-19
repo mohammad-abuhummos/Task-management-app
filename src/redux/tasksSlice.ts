@@ -10,7 +10,7 @@ import { toast } from "react-toastify";
 import {
   decryptTaskListDescription,
   encryptTaskDescription,
-} from "../utils/task";
+} from "../utils/task_utils";
 
 export const fetchTasks = createAsyncThunk(
   "tasks/fetchTasks",
