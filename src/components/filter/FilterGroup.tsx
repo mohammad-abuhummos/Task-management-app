@@ -7,9 +7,10 @@ interface FilterGroupProps {
     name: string;
     value?: string | null;
     onOptionChange: (option: string) => void;
+    className?: string;
 }
 
-const FilterGroup: React.FC<FilterGroupProps> = ({ title, value, options, name, onOptionChange }) => {
+const FilterGroup: React.FC<FilterGroupProps> = ({ title, value, options, name, onOptionChange, className }) => {
     const [selectedOption, setSelectedOption] = useState<string | null>(value ?? null);
 
     const handleOptionChange = (option: string) => {
@@ -18,7 +19,7 @@ const FilterGroup: React.FC<FilterGroupProps> = ({ title, value, options, name, 
     };
 
     return (
-        <div className="filter-group">
+        <div className={`filter-group ${className}`}>
             <p>{title}</p>
             <div className="filter-items">
                 {options.map((option) => (
