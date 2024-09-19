@@ -41,7 +41,7 @@ I used Jest, Vitest and React Testing Library for unit and integration testing.
 To run the test suite:
 
 ```bash
-npm test
+npm run test
 ```
 
 ## Project Structure
