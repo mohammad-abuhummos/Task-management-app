@@ -56,7 +56,7 @@ const ChipInput: React.FC<ChipInputProps> = ({ id, label, options, selectedValue
                 <div className="chips-container">
                     {selectedValues.map((value) => (
                         <div key={value} onClick={(event) => handleRemoveChip(value, event)}>
-                            <Chip text={value} />
+                            <Chip hasClose={true} text={value} />
                         </div>
                     ))}
                 </div>
