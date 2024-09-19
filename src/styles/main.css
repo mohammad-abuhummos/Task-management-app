@@ -257,3 +257,6 @@ h1 {
   cursor: pointer;
   font-weight: 500;
 }
+.relative {
+  position: relative;
+}
