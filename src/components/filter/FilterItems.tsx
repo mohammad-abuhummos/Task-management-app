@@ -16,7 +16,7 @@ const FilterItems: React.FC<FilterItemsProps> = ({ option, name, checked, onChan
                 name={name}
                 value={option}
                 checked={checked}
-                onChange={() => onChange(option)}
+                readOnly={true}
             />
             <label htmlFor={option}>{option}</label>
         </div>
